@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-weight: 500;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 36px 31px;
+}
+
+.hero {
+  height: calc(100vh - 72px);
+  padding: 72px;
+  display: flex;
+  align-items: center;
+  background-color: #ebf0fa;
+  background-image: url(../img/background.jpg);
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 49% auto;
+}
+.hero__content {
+  max-width: 511px;
+}
+.hero__title {
+  margin-bottom: 18px;
+  font-size: 30px;
+  line-height: 48px;
+  color: #1f4284;
+}
+.hero__descr {
+  margin-bottom: 36px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #727272;
+}
+.hero__btn {
+  position: relative;
+  padding: 19.5px 24px;
+  padding-right: 76px;
+  width: 341px;
+  font-size: 18px;
+  line-height: 29px;
+  text-align: start;
+  color: #ffffff;
+  background-color: #244c98;
+  border-radius: 60px;
+  transition: background-color 0.3 ease;
+}
+.hero__btn svg {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  fill: #ffffff;
+}
+.hero__btn svg path {
+  stroke: #1f4284;
+  transition: stroke 0.3 ease;
+}
+.hero__btn:hover {
+  background-color: #2e61c1;
+}
+.hero__btn:hover svg path {
+  stroke: #2e61c1;
+}
+.hero__btn:active {
+  background-color: #244c98;
+}
+.hero__btn:active svg path {
+  stroke: #1f4284;
+}

@@ -40,20 +40,72 @@ body {
   margin: 0 auto;
   padding: 36px 31px;
 }
+@media (max-width: 769px) {
+  .container {
+    padding: 24px 24px;
+  }
+}
 
 .hero {
   height: calc(100vh - 72px);
-  padding: 72px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  background-color: #ebf0fa;
+}
+@media (max-width: 910px) {
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+@media (max-width: 769px) {
+  .hero {
+    height: calc(100vh - 48px);
+    min-height: 586px;
+  }
+}
+.hero__back {
+  width: 49%;
+  height: 100%;
   background-color: #ebf0fa;
   background-image: url(../img/background.jpg);
-  background-position: right center;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-size: 49% auto;
+  background-size: 100% auto;
+}
+@media (max-width: 1441px) {
+  .hero__back {
+    width: 50%;
+    background-image: url(../img/background-1440.jpg);
+    background-size: 100% 100%;
+  }
+}
+@media (max-width: 910px) {
+  .hero__back {
+    width: 100%;
+    height: 61%;
+    background-image: url(../img/background-768.jpg);
+  }
 }
 .hero__content {
-  max-width: 511px;
+  padding: 72px;
+  max-width: 655px;
+}
+@media (max-width: 1251px) {
+  .hero__content {
+    max-width: 411px;
+  }
+}
+@media (max-width: 1005px) {
+  .hero__content {
+    padding: 24px;
+  }
+}
+@media (max-width: 910px) {
+  .hero__content {
+    max-width: 100%;
+  }
 }
 .hero__title {
   margin-bottom: 18px;
@@ -61,12 +113,35 @@ body {
   line-height: 48px;
   color: #1f4284;
 }
+@media (max-width: 1441px) {
+  .hero__title {
+    font-size: 26px;
+    line-height: 42px;
+  }
+}
+@media (max-width: 769px) {
+  .hero__title {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
 .hero__descr {
   margin-bottom: 36px;
   font-size: 17px;
   font-weight: 400;
   line-height: 27px;
   color: #727272;
+}
+@media (max-width: 910px) {
+  .hero__descr {
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 769px) {
+  .hero__descr {
+    font-size: 15px;
+    line-height: 24px;
+  }
 }
 .hero__btn {
   position: relative;
@@ -81,11 +156,28 @@ body {
   border-radius: 60px;
   transition: background-color 0.3 ease;
 }
+@media (max-width: 1251px) {
+  .hero__btn {
+    padding: 16px 18px;
+    padding-right: 56px;
+    width: 261px;
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
 .hero__btn svg {
   position: absolute;
   top: 12px;
   right: 12px;
   fill: #ffffff;
+}
+@media (max-width: 1251px) {
+  .hero__btn svg {
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+  }
 }
 .hero__btn svg path {
   stroke: #1f4284;

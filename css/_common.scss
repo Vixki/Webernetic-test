@@ -37,4 +37,8 @@ body {
 .container {
   margin: 0 auto;
   padding: $p-vertical 31px;
+
+  @include tablet-768 {
+    padding: $p-vertical-tabs 24px;
+  }
 }

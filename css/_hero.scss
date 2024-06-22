@@ -1,16 +1,57 @@
 .hero {
   height: calc(100vh - $p-vertical * 2);
-  padding: 72px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: #ebf0fa;
-  background-image: url(../img/background.jpg);
-  background-position: right center;
-  background-repeat: no-repeat;
-  background-size: 49% auto;
+
+  @include tablet-910 {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  @include tablet-768 {
+    height: calc(100vh - $p-vertical-tabs * 2);
+    min-height: 586px;
+  }
+
+  &__back {
+    width: 49%;
+    height: 100%;
+    background-color: #ebf0fa;
+    background-image: url(../img/background.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
+    @include desktop-1440 {
+      width: 50%;
+      background-image: url(../img/background-1440.jpg);
+      background-size: 100% 100%;
+    }
+
+    @include tablet-910 {
+      width: 100%;
+      height: 61%;
+      background-image: url(../img/background-768.jpg);
+    }
+  }
 
   &__content {
-    max-width: 511px;
+    padding: 72px;
+    max-width: 655px;
+
+    @include desktop-1250 {
+      max-width: 411px;
+    }
+
+    @include desktop-1005 {
+      padding: 24px;
+    }
+
+    @include tablet-910 {
+      max-width: 100%;
+    }
   }
 
   &__title {
@@ -18,6 +59,16 @@
     font-size: 30px;
     line-height: 48px;
     color: $blue-text-color;
+
+    @include desktop-1440 {
+      font-size: 26px;
+      line-height: 42px;
+    }
+
+    @include tablet-768 {
+      font-size: 20px;
+      line-height: 32px;
+    }
   }
 
   &__descr {
@@ -26,6 +77,15 @@
     font-weight: 400;
     line-height: 27px;
     color: #727272;
+
+    @include tablet-910 {
+      margin-bottom: 24px;
+    }
+
+    @include tablet-768 {
+      font-size: 15px;
+      line-height: 24px;
+    }
   }
 
   &__btn {
@@ -41,11 +101,26 @@
     border-radius: 60px;
     transition: background-color 0.3 ease;
 
+    @include desktop-1250 {
+      padding: 16px 18px;
+      padding-right: 56px;
+      width: 261px;
+      font-size: 15px;
+      line-height: 24px;
+    }
+
     svg {
       position: absolute;
       top: 12px;
       right: 12px;
       fill: #ffffff;
+
+      @include desktop-1250 {
+        top: 10px;
+        right: 10px;
+        width: 36px;
+        height: 36px;
+      }
 
       path {
         stroke: $blue-text-color;

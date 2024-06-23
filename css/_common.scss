@@ -36,9 +36,13 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: $p-vertical 31px;
+  padding: $p-vertical 40px;
 
   @include tablet-768 {
     padding: $p-vertical-tabs 24px;
+  }
+
+  @include mob-520 {
+    padding: $p-vertical-mob 24px;
   }
 }

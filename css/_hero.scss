@@ -15,6 +15,12 @@
     min-height: 586px;
   }
 
+  @include mob-520 {
+    height: calc(100vh - $p-vertical-mob * 2);
+    border-radius: 10px;
+    min-height: 482px;
+  }
+
   &__back {
     width: 49%;
     height: 100%;
@@ -35,6 +41,10 @@
       height: 61%;
       background-image: url(../img/background-768.jpg);
     }
+
+    @include mob-520 {
+      background-image: url(../img/background-mobile.jpg);
+    }
   }
 
   &__content {
@@ -51,6 +61,10 @@
 
     @include tablet-910 {
       max-width: 100%;
+    }
+
+    @include mob-520 {
+      padding-bottom: 18px;
     }
   }
 
@@ -69,6 +83,12 @@
       font-size: 20px;
       line-height: 32px;
     }
+
+    @include mob-520 {
+      margin-bottom: 14px;
+      font-size: 17px;
+      line-height: 27px;
+    }
   }
 
   &__descr {
@@ -85,6 +105,12 @@
     @include tablet-768 {
       font-size: 15px;
       line-height: 24px;
+    }
+
+    @include mob-520 {
+      margin-bottom: 18px;
+      font-size: 13px;
+      line-height: 21px;
     }
   }
 
@@ -109,14 +135,18 @@
       line-height: 24px;
     }
 
+    @include mob-520 {
+      width: 100%;
+    }
+
     svg {
       position: absolute;
-      top: 12px;
+      top: 50%;
+      transform: translateY(-50%);
       right: 12px;
       fill: #ffffff;
 
       @include desktop-1250 {
-        top: 10px;
         right: 10px;
         width: 36px;
         height: 36px;

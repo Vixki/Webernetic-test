@@ -20,11 +20,16 @@ h2 {
   font-weight: 500;
 }
 
+a {
+  text-decoration: none;
+}
+
 img {
   max-width: 100%;
 }
 
 button {
+  padding: 0;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -49,6 +54,15 @@ body {
   .container {
     padding: 14px 24px;
   }
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.325);
 }
 
 .hero {
@@ -235,4 +249,186 @@ body {
 }
 .hero__btn:active svg path {
   stroke: #1f4284;
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  min-height: 575px;
+  background-color: rgba(0, 0, 0, 0.325);
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  width: 500px;
+  height: 575px;
+  padding: 24px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f0f4fc;
+}
+@media (max-width: 500px) {
+  .modal {
+    width: 100%;
+  }
+}
+@media (max-height: 575px) {
+  .modal {
+    top: 0;
+    transform: translate(-50%, 0);
+  }
+}
+.modal__container {
+  position: relative;
+  padding-top: 56px;
+  height: 100%;
+}
+.modal__btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 52px;
+  width: 52px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+.modal__btn-close div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.modal__btn-close div span {
+  position: absolute;
+  display: inline-block;
+  width: 17px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  background-color: #000000;
+}
+.modal__btn-close div span:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.modal__btn-close div span:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.modal__btn-close:hover {
+  background-color: #e6e6e6;
+}
+.modal .form__title {
+  margin-bottom: 18px;
+  font-size: 24px;
+  line-height: 33px;
+  color: #323232;
+}
+.modal .form__inp {
+  margin-bottom: 4px;
+  padding: 24px;
+  width: 100%;
+  font-size: 20px;
+  line-height: 25px;
+  color: #323232;
+  background-color: #d7e2f6;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+.modal .form__inp::-moz-placeholder {
+  font-size: 18px;
+  color: #1f4284;
+}
+.modal .form__inp:-ms-input-placeholder {
+  font-size: 18px;
+  color: #1f4284;
+}
+.modal .form__inp::placeholder {
+  font-size: 18px;
+  color: #1f4284;
+}
+.modal .form__inp:hover {
+  background-color: #c2d3f1;
+}
+.modal .form .form__inp + .form__inp {
+  margin-bottom: 24px;
+}
+.modal .form__custom-check {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.modal .form__custom-check + label {
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  margin-bottom: 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: #323232;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.modal .form__custom-check + label:hover {
+  color: #656565;
+}
+.modal .form__custom-check + label::before {
+  content: "";
+  margin-right: 17px;
+  width: 18px;
+  height: 18px;
+  background-color: #f0f4fc;
+  border: 2px solid #323232;
+  border-radius: 2px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 80% 80%;
+}
+.modal .form__custom-check:checked + label::before {
+  border-color: #0b76ef;
+  background-color: #0b76ef;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+.modal .form__link {
+  display: inline-block;
+  margin-bottom: 36px;
+  font-size: 20px;
+  line-height: 27px;
+  color: #244c98;
+  transition: color 0.3s ease;
+}
+.modal .form__link:hover {
+  color: #152d5a;
+}
+.modal .form__btn {
+  display: block;
+  padding: 18px 12px;
+  width: 100%;
+  font-size: 18px;
+  line-height: 29px;
+  color: #244c98;
+  border: 1px #244c98 solid;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.modal .form__btn:hover {
+  color: #102346;
+  border-color: #102346;
+}
+.modal .form .btn_fill {
+  margin-bottom: 4px;
+  color: #ffffff;
+  background-color: #244c98;
+  transition: background-color 0.3s ease;
+}
+.modal .form .btn_fill:hover {
+  background-color: #396dd0;
+  border-color: #244c98;
 }

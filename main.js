@@ -7,12 +7,12 @@ $(() => {
         $(".modal__container")
             .append('<form class="modal__form form">' +
                 '<h2 class="form__title">Войти в систему</h2>' +
-                '<input class="form__inp" type="text" placeholder="Email/Телефон">' +
-                '<input class="form__inp" type="password" placeholder="Пароль">' +
+                '<input class="form__inp" type="text" required placeholder="Email/Телефон">' +
+                '<input class="form__inp" type="password" required placeholder="Пароль">' +
                 '<input class="form__custom-check" id="remember" type="checkbox"/>' +
                 '<label for="remember" tabindex="0">Запомнить пароль </label>' +
                 '<a href="#" class="form__link">Восстановить</a>' +
-                '<button class="form__btn btn_fill" id="log-in">Войти</button>' +
+                '<button class="form__btn btn_fill" id="log-in" type="submit">Войти</button>' +
                 '<button class="form__btn" id="sign-up">Зарегестрироваться</button>' +
                 '</form>'
             );
